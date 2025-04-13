@@ -6,7 +6,8 @@ type Props = {
   searchParams: { [key: string]: string | string[] | undefined }; // searchParams を追加
 };
 
-export default function InsuranceTypePage({ params }: Props) {
+// async を追加して非同期コンポーネントにする
+export default async function InsuranceTypePage({ params }: Props) {
   // type に応じて表示内容を変える（将来的に実装）
   const insuranceType = params.type;
 
