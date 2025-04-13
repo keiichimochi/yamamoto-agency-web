@@ -1,13 +1,7 @@
 import React from 'react';
 
-// 動的ルートパラメータと検索パラメータを受け取るための Props 型定義
-type Props = {
-  params: { type: string };
-  searchParams: { [key: string]: string | string[] | undefined }; // searchParams を追加
-};
-
-// async を追加して非同期コンポーネントにする
-export default async function InsuranceTypePage({ params }: Props) {
+// カスタム型定義を削除し、Next.js の型推論に任せる
+export default async function InsuranceTypePage({ params }: { params: { type: string } }) {
   // type に応じて表示内容を変える（将来的に実装）
   const insuranceType = params.type;
 
